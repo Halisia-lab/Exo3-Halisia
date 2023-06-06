@@ -1,7 +1,7 @@
 package org.example;
 
 public class Calculator {
-    int operator;
+    char operator;
     int currentResult;
 
 
@@ -15,13 +15,16 @@ public class Calculator {
         switch (this.operator) {
             case'+':
                 this.currentResult = this.currentResult + newNumber;
+                break;
             case '-':
                 this.currentResult = this.currentResult - newNumber;
+                break;
             default:
                 this.currentResult = 0;
-
+                break;
         }
-        lineResult = newNumber + " (=" + this.currentResult+ ")";
+
+        lineResult = this.operator +""+ newNumber + " (=" + this.currentResult+ ")";
         return lineResult;
     }
 }

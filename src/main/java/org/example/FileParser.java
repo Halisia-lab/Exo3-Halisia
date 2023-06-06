@@ -16,12 +16,10 @@ public class FileParser {
 
             while (line != null) {
                 linesString.add(line);
-                System.out.println(line);
-                // read next line
                 line = reader.readLine();
 
             }
-return linesString;
+            return linesString;
         } catch (IOException e) {
             e.printStackTrace();
         }
